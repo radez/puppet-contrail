@@ -254,7 +254,7 @@ def _rewrite_net_interfaces_file(temp_dir_name, dev, mac, vhost_ip, netmask, gat
     commands.getstatusoutput("echo '' >> %s" %(temp_intf_file))
     commands.getstatusoutput("echo 'auto vhost0' >> %s" %(temp_intf_file))
     commands.getstatusoutput("echo 'iface vhost0 inet static' >> %s" %(temp_intf_file))
-    commands.getstatusoutput("echo '    pre-up %s/if-vhost0' >> %s" %('/opt/contrail/bin', temp_intf_file))
+    commands.getstatusoutput("echo '    pre-up %s/if-vhost0' >> %s" %('/usr/share/contrail/', temp_intf_file))
     commands.getstatusoutput("echo '    netmask %s' >> %s" %(netmask, temp_intf_file))
     commands.getstatusoutput("echo '    network_name application' >> %s" %(temp_intf_file))
     if vhost_ip:

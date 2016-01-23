@@ -67,7 +67,7 @@ class contrail::control::provision_linklocal (
 ) {
 
   exec { "provision_linklocal.py ${api_address}" :
-    command => "python /opt/contrail/utils/provision_linklocal.py \
+    command => "/bin/python /usr/share/contrail/provision_linklocal.py \
                  --api_server_ip ${api_address} \
                  --api_server_port ${api_port} \
                  --linklocal_service_name ${linklocal_service_name} \

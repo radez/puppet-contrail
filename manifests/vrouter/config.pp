@@ -92,8 +92,8 @@ class contrail::vrouter::config (
     content => "DISCOVERY=${discovery_ip}",
   }
 
-  exec { '/bin/python /opt/contrail/utils/update_dev_net_config_files.py' :
-    command => "/bin/python /opt/contrail/utils/update_dev_net_config_files.py \
+  exec { '/bin/python /usr/share/contrail/update_dev_net_config_files.py' :
+    command => "/bin/python /usr/share/contrail/update_dev_net_config_files.py \
                  --vhost_ip ${vhost_ip} \
                  --dev ${device} \
                  --compute_dev ${device} \

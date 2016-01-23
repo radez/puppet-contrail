@@ -64,7 +64,7 @@ class contrail::control::provision_control (
   }
 
   exec { "provision_control.py ${control_node_name}" :
-    command => "python /opt/contrail/utils/provision_control.py \
+    command => "/bin/python /usr/share/contrail/provision_control.py \
                  --host_name ${control_node_name} \
                  --host_ip ${control_node_address} \
                  --router_asn ${router_asn} \
